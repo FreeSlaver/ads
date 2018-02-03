@@ -9,52 +9,56 @@ public class ArrayQueue2<T> implements Queue<T> {
     private int front;
     private int rear;
     private T[] array;
-    private int capacity;
+    private int size;
 
     public ArrayQueue2(int capacity) {
-        this.front = 0;
-        this.rear = 0;
-        this.capacity = capacity;
         this.array = (T[]) new Object[capacity];
+        this.front = -1;
+        this.rear = -1;
+        this.size = 0;
     }
 
     @Override
     public int enQueue(T t) {
-        if (size() == capacity) {
+        if (size == array.length) {
             throw new IndexOutOfBoundsException("queue full");
         }
-        array[rear++] = t;
-        return size();
+        if (size == 0) {
+            array[++rear] = t;
+            front = 0;
+        }
+        return ++size;
     }
 
     @Override
     public T deQueue() {
-        if (size() == 0) {
+        if (size == 0) {
             throw new IndexOutOfBoundsException("queue empty");
         }
-        T t = array[front++];
+        T t = array[front];
+        array[front] = null;
+        ++front;
+        --size;
+        if(size==0){
+            front= -1;
+            rear = -1;
+        }
         return t;
     }
 
     @Override
     public String display() {
-        if (size() == 0) {
-            throw new IndexOutOfBoundsException("queue empty");
+        if (size == 0) {
+            return null;
         }
         return Arrays.toString(array);
+
     }
 
-    public int size() {
-        return rear - front;
-    }
 
     @Override
     public T get(int index) {
-        int size = size();
-        if (index < 0) {
-            index = index % size + size;
-        }
-        if (index > size - 1) {
+        if (index < 0 || index > size - 1) {
             throw new IndexOutOfBoundsException();
         }
         return array[index];

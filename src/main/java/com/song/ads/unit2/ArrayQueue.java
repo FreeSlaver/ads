@@ -24,8 +24,8 @@ public class ArrayQueue<T> implements Queue<T> {
         if (array.length == size) {
             throw new IndexOutOfBoundsException("queue full");
         }
-        array[size++] = t;
-        return size;
+        array[size] = t;
+        return ++size;
     }
 
     //如果是空的，怎么办?想想，使用front和rear有什么好处？
