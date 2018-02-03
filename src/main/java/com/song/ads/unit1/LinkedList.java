@@ -16,4 +16,6 @@ public interface LinkedList<T> {
     int remove(T t);
 
     void display();
+
+    T get(int index);
 }

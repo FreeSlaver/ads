@@ -203,5 +203,8 @@ public class SingleLinkedList<T> implements LinkedList<T> {
         }
     }*/
 
-
+    @Override
+    public T get(int index) {
+        return null;
+    }
 }

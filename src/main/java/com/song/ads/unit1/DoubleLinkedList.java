@@ -209,5 +209,10 @@ public class DoubleLinkedList<T> implements LinkedList<T> {
         tail = tPrev;
         return result;
     }
+
+    @Override
+    public T get(int index) {
+        return null;
+    }
 }
 

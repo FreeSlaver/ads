@@ -6,5 +6,4 @@ package com.song.ads.unit1;
 public class Arrays {
 
 
-
 }

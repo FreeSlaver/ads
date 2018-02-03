@@ -9,5 +9,7 @@ public interface Queue<T> {
 
     T deQueue();
 
-    void display();
+    String display();
+
+    T get(int index);
 }

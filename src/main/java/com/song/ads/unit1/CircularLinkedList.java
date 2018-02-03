@@ -191,6 +191,11 @@ public class CircularLinkedList<T> implements LinkedList<T> {
         }
     }
 
+    @Override
+    public T get(int index) {
+        return null;
+    }
+
     /**
      * 获取最后一个元素的值
      *

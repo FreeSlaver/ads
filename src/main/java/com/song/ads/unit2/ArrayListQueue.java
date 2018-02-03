@@ -7,7 +7,7 @@ import java.util.List;
 /**
  * Created by 00013708 on 2017/9/12.
  */
-public class ArrayListQueue<T> implements  Queue<T> {
+public class ArrayListQueue<T> implements Queue<T> {
     private List<T> arrayList;
 
     public ArrayListQueue() {
@@ -16,14 +16,19 @@ public class ArrayListQueue<T> implements  Queue<T> {
 
     public int enQueue(T t) {
         arrayList.add(t);
-        return arrayList.size()-1;
+        return arrayList.size() - 1;
     }
 
     public T deQueue() {
         return arrayList.remove(0);
     }
 
-    public void display() {
-        System.out.println(Arrays.toString(arrayList.toArray()));
+    public String display() {
+        return Arrays.toString(arrayList.toArray());
+    }
+
+    @Override
+    public T get(int index) {
+        return arrayList.get(index);
     }
 }
