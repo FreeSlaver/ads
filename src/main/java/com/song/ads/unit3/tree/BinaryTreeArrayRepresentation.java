@@ -1,4 +1,4 @@
-package com.song.ads.unit3.binarytree;
+package com.song.ads.unit3.tree;
 
 /**
  * Created by 001844 on 2018/2/7.

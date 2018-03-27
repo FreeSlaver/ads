@@ -1,6 +1,6 @@
 package com.song.ads.unit3;
 
-import com.song.ads.unit3.binarytree.BinaryTreeLinkedListRepresentation;
+import com.song.ads.unit3.tree.BinaryTreeLinkedListRepresentation;
 import org.junit.Test;
 
 /**

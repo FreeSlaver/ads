@@ -1,4 +1,4 @@
-package com.song.ads.unit3.binarytree;
+package com.song.ads.unit3.tree;
 
 import com.song.ads.unit3.Node;
 
